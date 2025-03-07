@@ -39,7 +39,7 @@ const BreadcrumbContent = ({slug, categoryId, categoryName}:{slug:string, catego
 }
 
 const page = async ({params}:{params:any}) => {
-  const {id, slug} = await params;
+  const { id, slug } = params;
   const productDetail = await GetAllProducts({
     id: id
   })
