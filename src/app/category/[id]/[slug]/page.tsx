@@ -30,7 +30,7 @@ const BreadcrumbContent = ({slug}:{slug:string}) => {
   )
 }
 
-const page = async ({params}:{params:{id:string, slug:string}}) => {
+const page = async ({params}:{params:any}) => {
   const {id, slug} = params;
   const results = await Promise.allSettled([
     GetAllCategory(),
