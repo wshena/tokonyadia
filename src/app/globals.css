@@ -23,6 +23,10 @@ body {
   box-sizing: inherit;
 }
 
+input {
+  background-color: white;
+}
+
 .slick-dots li.slick-active span {
   background-color: white !important;
 }
