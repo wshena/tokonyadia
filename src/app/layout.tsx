@@ -5,6 +5,7 @@ import AppProvider from "@/providers/AppProvider";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import LoadingIndicator from "@/components/loading/LoadingIndicator";
+import { Suspense } from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -40,10 +41,12 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}
         suppressHydrationWarning
       >
-        <LoadingIndicator />
-        <AppProvider>
-          {children}
-        </AppProvider>
+        <Suspense fallback={<div>Loading...</div>}>
+          <LoadingIndicator />
+          <AppProvider>
+            {children}
+          </AppProvider>
+        </Suspense>
       </body>
     </html>
   );
