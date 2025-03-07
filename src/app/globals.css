@@ -27,6 +27,10 @@ input {
   background-color: white;
 }
 
+textarea {
+  background-color: white;
+}
+
 .slick-dots li.slick-active span {
   background-color: white !important;
 }
